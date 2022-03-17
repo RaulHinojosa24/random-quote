@@ -29,3 +29,10 @@ const quotes = [
         author: " Tyne Daly"
     }
 ];
+
+document.querySelector(".btn").addEventListener("click", (e) => {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    document.querySelector(".quote-content").textContent = quote.quote;
+    document.querySelector(".author").textContent = quote.author;
+});;
